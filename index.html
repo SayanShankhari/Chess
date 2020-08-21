@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chess</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="./images/logo.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body onload="init()">
+		<center>
+			<h1>Hello, World!</h1>
+			<h2>Welcome to the game of chess!</h2>
+		</center>
+
+		<div id="chess_board">
+			<div id="cell_00" class="cell"><img width="64" height="64" src="./images/black_rook.png"></div>
+			<div id="cell_01" class="cell"><img width="64" height="64" src="./images/black_knight.png"></div>
+			<div id="cell_02" class="cell"><img width="64" height="64" src="./images/black_bishop.png"></div>
+			<div id="cell_03" class="cell"><img width="64" height="64" src="./images/black_queen.png"></div>
+			<div id="cell_04" class="cell"><img width="64" height="64" src="./images/black_king.png"></div>
+			<div id="cell_05" class="cell"><img width="64" height="64" src="./images/black_bishop.png"></div>
+			<div id="cell_06" class="cell"><img width="64" height="64" src="./images/black_knight.png"></div>
+			<div id="cell_07" class="cell"><img width="64" height="64" src="./images/black_rook.png"></div>
+			<br />
+			<div id="cell_10" class="cell"><img width="64" height="64" src="./images/black_pawn.png"></div>
+			<div id="cell_11" class="cell"><img width="64" height="64" src="./images/black_pawn.png"></div>
+			<div id="cell_12" class="cell"><img width="64" height="64" src="./images/black_pawn.png"></div>
+			<div id="cell_13" class="cell"><img width="64" height="64" src="./images/black_pawn.png"></div>
+			<div id="cell_14" class="cell"><img width="64" height="64" src="./images/black_pawn.png"></div>
+			<div id="cell_15" class="cell"><img width="64" height="64" src="./images/black_pawn.png"></div>
+			<div id="cell_16" class="cell"><img width="64" height="64" src="./images/black_pawn.png"></div>
+			<div id="cell_17" class="cell"><img width="64" height="64" src="./images/black_pawn.png"></div>
+			<br />
+			<div id="cell_20" class="cell"></div>
+			<div id="cell_21" class="cell"></div>
+			<div id="cell_22" class="cell"></div>
+			<div id="cell_23" class="cell"></div>
+			<div id="cell_24" class="cell"></div>
+			<div id="cell_25" class="cell"></div>
+			<div id="cell_26" class="cell"></div>
+			<div id="cell_27" class="cell"></div>
+			<br />
+			<div id="cell_30" class="cell"></div>
+			<div id="cell_31" class="cell"></div>
+			<div id="cell_32" class="cell"></div>
+			<div id="cell_33" class="cell"></div>
+			<div id="cell_34" class="cell"></div>
+			<div id="cell_35" class="cell"></div>
+			<div id="cell_36" class="cell"></div>
+			<div id="cell_37" class="cell"></div>
+			<br />
+			<div id="cell_40" class="cell"></div>
+			<div id="cell_41" class="cell"></div>
+			<div id="cell_42" class="cell"></div>
+			<div id="cell_43" class="cell"></div>
+			<div id="cell_44" class="cell"></div>
+			<div id="cell_45" class="cell"></div>
+			<div id="cell_46" class="cell"></div>
+			<div id="cell_47" class="cell"></div>
+			<br />
+			<div id="cell_50" class="cell"></div>
+			<div id="cell_51" class="cell"></div>
+			<div id="cell_52" class="cell"></div>
+			<div id="cell_53" class="cell"></div>
+			<div id="cell_54" class="cell"></div>
+			<div id="cell_55" class="cell"></div>
+			<div id="cell_56" class="cell"></div>
+			<div id="cell_57" class="cell"></div>
+			<br />
+			<div id="cell_60" class="cell"><img width="64" height="64" src="./images/white_pawn.png"></div>
+			<div id="cell_61" class="cell"><img width="64" height="64" src="./images/white_pawn.png"></div>
+			<div id="cell_62" class="cell"><img width="64" height="64" src="./images/white_pawn.png"></div>
+			<div id="cell_63" class="cell"><img width="64" height="64" src="./images/white_pawn.png"></div>
+			<div id="cell_64" class="cell"><img width="64" height="64" src="./images/white_pawn.png"></div>
+			<div id="cell_65" class="cell"><img width="64" height="64" src="./images/white_pawn.png"></div>
+			<div id="cell_66" class="cell"><img width="64" height="64" src="./images/white_pawn.png"></div>
+			<div id="cell_67" class="cell"><img width="64" height="64" src="./images/white_pawn.png"></div>
+			<br />
+			<div id="cell_70" class="cell"><img width="64" height="64" src="./images/white_rook.png"></div>
+			<div id="cell_71" class="cell"><img width="64" height="64" src="./images/white_knight.png"></div>
+			<div id="cell_72" class="cell"><img width="64" height="64" src="./images/white_bishop.png"></div>
+			<div id="cell_73" class="cell"><img width="64" height="64" src="./images/white_queen.png"></div>
+			<div id="cell_74" class="cell"><img width="64" height="64" src="./images/white_king.png"></div>
+			<div id="cell_75" class="cell"><img width="64" height="64" src="./images/white_bishop.png"></div>
+			<div id="cell_76" class="cell"><img width="64" height="64" src="./images/white_knight.png"></div>
+			<div id="cell_77" class="cell"><img width="64" height="64" src="./images/white_rook.png"></div>
+		</div>
+	</body>
+</html>
