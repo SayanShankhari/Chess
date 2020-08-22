@@ -22,14 +22,19 @@ function setupListeners() {
 }
 
 function setupBoard() {
-	var i, j, p;
+	var i, j;
+	let colors = ["#CCCCCC", "#888888"];
+	var cell, piece;
 
 	for (i = 0; i < 8; i++) {
 		board.push ([]);
 
 		for (j = 0; j < 8; j++) {
-			p = getPieceInCell (document.getElementById ("cell_" + i + "" + j));
-			board [i].push (p);
+			cell = document.getElementById ("cell_" + i + "" + j);
+			cell.style.background = colors [(i + j) % 2];
+
+			piece = getPieceInCell (cell);
+			board [i].push (piece);
 		}
 	}
 }
@@ -46,17 +51,40 @@ function cellOnClick (cell) {
 		clickedCell = cell;
 		cell.style.border = "1px solid #0000ff";
 	} else {
-		if (getPieceInCell (clickedCell) != null) {
-			move (clickedCell, cell);
-		}
-
+		move (clickedCell, cell);
 		clickedCell = null;
 		resetCellsBorder();
 	}
 }
 
 function move (cell0, cell1) {
-	var moves = getPossibleMoves (cell0);
+	getPossibleMoves (cell0);
+	var p0 = getCellPosition (cell0);
+	var p1 = getCellPosition (cell1);
+
+	var possible = false;
+
+	for (var i = 0; i < moves.length; i++) {
+		if (moves [i].x == p1.x && moves [i].y == p1.y) {
+			possible = true;
+			break;
+		}
+	}
+
+	if (possible) {
+		board [p1.y][p1.x] = board [p0.y][p0.x];
+		board [p0.y][p0.x] = null;
+
+		if (cell1.childNodes.length == 1) {
+			cell1.removeChild (cell1.childNodes[0]);
+		}
+		
+		cell1.appendChild (cell0.childNodes[0]);
+		
+		if (cell0.childNodes.length == 1) {
+			cell0.removeChild (cell0.childNodes[0]);
+		}
+	}
 }
 
 function getPossibleMoves (cell) {
